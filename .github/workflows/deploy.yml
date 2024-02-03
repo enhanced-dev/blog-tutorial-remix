@@ -108,7 +108,7 @@ jobs:
           exitOnceUploaded: true
           uploadMetadata: true
           logFile: true
-          buildStorybookDir: "storybook-static"
+          storybookBuildDir: "storybook-static"
           skip: "@(renovate/**|dependabot/**)"
 
   # deploy:
