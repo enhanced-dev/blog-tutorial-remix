@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import React from "react";
-import { Outlet, useLoaderData, useMatches } from "@remix-run/react";
+// import { Outlet, useLoaderData, useMatches } from "@remix-run/react";
 import { unstable_createRemixStub as createRemixStub } from "@remix-run/testing";
 import { json } from "@remix-run/node";
 
