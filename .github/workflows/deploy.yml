@@ -107,7 +107,7 @@ jobs:
           exitZeroOnChanges: true
           exitOnceUploaded: true
           uploadMetadata: true
-          logFile: true
+          logFile: "chromatic.log"
           storybookBuildDir: "storybook-static"
           skip: "@(renovate/**|dependabot/**)"
 
