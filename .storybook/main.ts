@@ -22,7 +22,7 @@ const config: StorybookConfig = {
       },
     },
     "storybook-addon-pseudo-states",
-    "@chromatic-com/storybook"
+    "@chromatic-com/storybook",
   ],
   framework: {
     name: "@storybook/react-vite",
@@ -35,7 +35,6 @@ const config: StorybookConfig = {
   env: (config) => ({
     ...config,
     NODE_ENV: "development",
-    // IS_STORYBOOK: "true",
   }),
 };
 export default config;

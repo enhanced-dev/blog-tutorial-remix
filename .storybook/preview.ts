@@ -75,6 +75,16 @@ const preview: Preview = {
         date: /Date$/,
       },
     },
+    viewport: {
+      viewports: {
+        small: { name: "Small", styles: { width: "640px", height: "800px" } },
+        large: { name: "Large", styles: { width: "1024px", height: "1000px" } },
+        xLarge: {
+          name: "X-Large",
+          styles: { width: "1200px", height: "1080px" },
+        },
+      },
+    },
     // backgrounds: {
     //   default: "light",
     // },
