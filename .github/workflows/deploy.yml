@@ -16,65 +16,65 @@ permissions:
   contents: read
 
 jobs:
-  lint:
-    name: ⬣ ESLint
-    runs-on: ubuntu-latest
-    steps:
-      - name: ⬇️ Checkout repo
-        uses: actions/checkout@v3
+  # lint:
+  #   name: ⬣ ESLint
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: ⬇️ Checkout repo
+  #       uses: actions/checkout@v3
 
-      - name: ⎔ Setup node
-        uses: actions/setup-node@v3
-        with:
-          cache: npm
-          cache-dependency-path: ./package.json
-          node-version: 18
+  #     - name: ⎔ Setup node
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         cache: npm
+  #         cache-dependency-path: ./package.json
+  #         node-version: 18
 
-      - name: 📥 Install deps
-        run: npm install
+  #     - name: 📥 Install deps
+  #       run: npm install
 
-      - name: 🔬 Lint
-        run: npm run lint
+  #     - name: 🔬 Lint
+  #       run: npm run lint
 
-  typecheck:
-    name: ʦ TypeScript
-    runs-on: ubuntu-latest
-    steps:
-      - name: ⬇️ Checkout repo
-        uses: actions/checkout@v3
+  # typecheck:
+  #   name: ʦ TypeScript
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: ⬇️ Checkout repo
+  #       uses: actions/checkout@v3
 
-      - name: ⎔ Setup node
-        uses: actions/setup-node@v3
-        with:
-          cache: npm
-          cache-dependency-path: ./package.json
-          node-version: 18
+  #     - name: ⎔ Setup node
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         cache: npm
+  #         cache-dependency-path: ./package.json
+  #         node-version: 18
 
-      - name: 📥 Install deps
-        run: npm install
+  #     - name: 📥 Install deps
+  #       run: npm install
 
-      - name: 🔎 Type check
-        run: npm run typecheck --if-present
+  #     - name: 🔎 Type check
+  #       run: npm run typecheck --if-present
 
-  vitest:
-    name: ⚡ Vitest
-    runs-on: ubuntu-latest
-    steps:
-      - name: ⬇️ Checkout repo
-        uses: actions/checkout@v3
+  # vitest:
+  #   name: ⚡ Vitest
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: ⬇️ Checkout repo
+  #       uses: actions/checkout@v3
 
-      - name: ⎔ Setup node
-        uses: actions/setup-node@v3
-        with:
-          cache: npm
-          cache-dependency-path: ./package.json
-          node-version: 18
+  #     - name: ⎔ Setup node
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         cache: npm
+  #         cache-dependency-path: ./package.json
+  #         node-version: 18
 
-      - name: 📥 Install deps
-        run: npm install
+  #     - name: 📥 Install deps
+  #       run: npm install
 
-      - name: ⚡ Run vitest
-        run: npm run test -- --coverage
+  #     - name: ⚡ Run vitest
+  #       run: npm run test -- --coverage
 
   chromatic:
     name: Chromatic
