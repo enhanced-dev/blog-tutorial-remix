@@ -16,8 +16,7 @@
     "validate": "run-p \"test -- --run\" lint typecheck",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test-storybook": "test-storybook --coverage",
-    "chromatic": "npm run chromatic --project-token=chpt_dec3c7503a78448 --exit-once-uploaded --exit-zero-on-changes --only-changed --storybook-build-dir 'storybook-static' --skip \"@(renovate/**|dependabot/**)\""
+    "test-storybook": "test-storybook --coverage"
   },
   "prettier": {},
   "eslintIgnore": [
