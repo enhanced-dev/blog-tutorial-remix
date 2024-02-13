@@ -100,7 +100,7 @@ jobs:
 
       - name: ⚡ Run chromatic
         # uses: chromaui/action@latest
-        uses: chromaui/action@10.9.5--canary.920.7878891397.0
+        uses: chromaui/action-canary@10.9.5--canary.920.7878891397.0
         # Chromatic GitHub Action options
         with:
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
