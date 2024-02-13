@@ -100,7 +100,7 @@ jobs:
 
       - name: ⚡ Run chromatic
         # uses: chromaui/action@latest
-        run: npm run chromatic  --project-token=chpt_dec3c7503a78448 --exit-once-uploaded --exit-zero-on-changes --only-changed --storybook-build-dir "storybook-static" --skip "@(renovate/**|dependabot/**)"
+        run: npm run chromatic
         # uses: chromaui/action-canary@10.9.5--canary.920.7878891397.0
         # Chromatic GitHub Action options
         # with:
