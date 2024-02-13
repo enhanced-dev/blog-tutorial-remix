@@ -17,7 +17,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test-storybook": "test-storybook --coverage",
-    "chromatic": "npx chromatic --project-token=chpt_dec3c7503a78448 --exit-once-uploaded --exit-zero-on-changes --only-changed"
+    "chromatic": "npm chromatic --project-token=chpt_dec3c7503a78448 --exit-once-uploaded --exit-zero-on-changes --only-changed"
   },
   "prettier": {},
   "eslintIgnore": [
@@ -32,6 +32,7 @@
     "@remix-run/react": "^1.16.1",
     "@remix-run/serve": "^1.16.1",
     "bcryptjs": "^2.4.3",
+    "chromatic": "^10.9.5--canary.920.7878891397.0",
     "isbot": "^3.6.8",
     "marked": "^5.0.3",
     "react": "^18.2.0",

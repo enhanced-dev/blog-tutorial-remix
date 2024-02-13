@@ -99,13 +99,15 @@ jobs:
         run: npm run build-storybook
 
       - name: ⚡ Run chromatic
-        uses: chromaui/action@latest
+        # uses: chromaui/action@latest
+        uses: chromaui/action-canary
         # Chromatic GitHub Action options
         with:
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           exitZeroOnChanges: true
           exitOnceUploaded: true
+          onlyChanged: true
           uploadMetadata: true
           logFile: "chromatic.log"
           storybookBuildDir: "storybook-static"

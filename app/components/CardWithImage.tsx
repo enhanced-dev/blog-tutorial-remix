@@ -13,7 +13,7 @@ export const CardWithImage = ({ optDelayedPurchase = false }) => {
         <img src="/cardPlaceholder.jpeg" alt="Shoes" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">Shoes!</h2>
+        <h2 className="card-title">Shoes</h2>
         <p>If a dog chews shoes whose shoes does he choose?</p>
         <div className="card-actions justify-end">
           {!optDelayedPurchase ? (
