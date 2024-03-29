@@ -89,8 +89,8 @@ jobs:
         uses: tj-actions/changed-files@v44
         with:
           files: |
-            app/**
-            .storybook/**
+            - app/**
+            - .storybook/**
 
   vrt:
     name: Testing visual regression
