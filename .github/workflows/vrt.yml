@@ -1,0 +1,58 @@
+name: 🚀 Deploy
+
+on:
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      skip:
+        description: "Skip running VRT"
+        required: false
+        type: boolean
+        default: false
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  chromatic:
+    name: Chromatic
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v3
+        with:
+          cache: npm
+          cache-dependency-path: ./package.json
+          node-version: 16
+
+      - name: 📥 Install deps
+        run: npm install
+
+      - name: Build Storybook
+        run: npm run build-storybook
+
+      - name: ⚡ Run chromatic
+        # uses: chromaui/action@latest
+        run: npm run chromatic
+        # uses: chromaui/action-canary@10.9.5--canary.920.7878891397.0
+        # Chromatic GitHub Action options
+        # with:
+        #   # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+        #   projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+        #   exitZeroOnChanges: true
+        #   exitOnceUploaded: true
+        #   onlyChanged: true
+        #   uploadMetadata: true
+        #   logFile: "chromatic.log"
+        #   storybookBuildDir: "storybook-static"
+        #   skip: "@(renovate/**|dependabot/**)"
