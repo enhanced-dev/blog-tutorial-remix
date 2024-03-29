@@ -6,7 +6,6 @@ import { CardWithImage } from "./CardWithImage";
 const meta = {
   title: "Molecules/CardWithImage",
   component: CardWithImage,
-  // Docs w
   // tags: ["autodocs"],
 } satisfies Meta<typeof CardWithImage>;
 

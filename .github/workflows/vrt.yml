@@ -1,13 +1,6 @@
 name: Chromatic
 
-on:
-  workflow_call:
-    inputs:
-      skip:
-        description: "Skip running VRT"
-        required: false
-        type: boolean
-        default: false
+on: workflow_call
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -23,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⬇️ Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 

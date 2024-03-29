@@ -107,8 +107,7 @@ jobs:
     needs: [changed-files]
     if: ${{ needs.changed-files.outputs.any_changed == 'true' }}
     uses: ./.github/workflows/vrt.yml
-    with:
-      skip: false
+    secrets: inherit
 
   # deploy:
   #   name: 🚀 Deploy
