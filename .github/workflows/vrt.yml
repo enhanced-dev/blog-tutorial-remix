@@ -1,4 +1,4 @@
-name: 🚀 Deploy
+name: Chromatic
 
 on:
   workflow_call:
