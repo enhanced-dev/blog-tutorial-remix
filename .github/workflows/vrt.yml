@@ -1,7 +1,6 @@
 name: 🚀 Deploy
 
 on:
-  workflow_dispatch:
   workflow_call:
     inputs:
       skip:
