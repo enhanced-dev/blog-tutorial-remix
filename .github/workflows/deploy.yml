@@ -99,7 +99,7 @@ jobs:
         run: |
           for file in ${ALL_CHANGED_FILES}; do
             echo "$file was changed"
-            echo ${ANY_CHANGED}
+            echo Did any files change: ${ANY_CHANGED}
           done
 
   vrt:
