@@ -3,7 +3,7 @@ name: Chromatic
 on: workflow_call
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.ref }}-chromatic
   cancel-in-progress: true
 
 permissions:
@@ -40,7 +40,6 @@ jobs:
         # Chromatic GitHub Action options
         # with:
         #   # 👇 Chromatic projectToken, refer to the manage page to obtain it.
-        #   projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
         #   exitZeroOnChanges: true
         #   exitOnceUploaded: true
         #   onlyChanged: true
