@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
+// import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
 import { Steps } from "./Steps";
 
@@ -12,7 +12,7 @@ const meta = {
     //👇 The viewports object from the Essentials addon
     viewport: {
       //👇 The viewports you want to use
-      viewports: INITIAL_VIEWPORTS,
+      // viewports: INITIAL_VIEWPORTS,
       defaultViewport: "ipad12p",
     },
   },

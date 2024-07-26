@@ -17,7 +17,7 @@ export const CardWithImage = ({ optDelayedPurchase = false }) => {
         <p>If a dog chews shoes whose shoes does he choose?</p>
         <div className="card-actions justify-end">
           {!optDelayedPurchase ? (
-            <button className="btn-primary btn">Buy Now</button>
+            <button className="btn-secondary btn">Buy Now</button>
           ) : null}
         </div>
       </div>
